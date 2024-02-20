@@ -141,6 +141,9 @@ def main():
     policy_sales_channel_option = st.selectbox("Select customer policy sales channel:", vehicle_damage_list, key='policy_sales_channel_option')
     vintage_option = st.slider('Select customer vintage:', min_value=0, max_value=500, value=100, step=1, key='vintage_option')
     
+    df_prediction = pd.DataFrame()
+    prediction_result = ''
+
     if st.button('Predict'):
         df_prediction = create_df(sex_option, age_option, driving_license_option, region_code_option,
                                   previously_insured_option, vehicle_age_option, vehicle_damage_option,
