@@ -142,8 +142,6 @@ def main():
 
     if st.button('Predict'):
         prediction_result = prediction_model(df_prediction)
-
-    st.success('Dataframe for Prediction:', df_prediction)
     st.success(f'Prediction Result: {prediction_result}')
 
 # %%
