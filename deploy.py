@@ -78,9 +78,9 @@ def prediction_model(df):
     df = convert_driving_license(df)
     df = convert_previously_insured(df)
     df = convert_vehicle_damage(df)
-    df = encode_region_code(df, encode_region_code)
-    df = encode_vehicle_age(df, encode_vehicle_age)
-    df = encode_policy_sales_channel(df, encode_policy_sales_channel)
+    df = encode_region_code(df, region_code_encoder)
+    df = encode_vehicle_age(df, policy_sales_channel_encoder)
+    df = encode_policy_sales_channel(df, policy_sales_channel_encoder)
 
     df['predictions'] = logistic_rus.predict(df)
 
