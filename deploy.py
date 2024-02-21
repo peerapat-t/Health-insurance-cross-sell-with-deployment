@@ -114,16 +114,16 @@ def main():
                                  '134','135','136','137','138','139','140','143','144','145','146','147','148','149',
                                  '150','151','152','153','154','155','156','157','158','159','160','163']
     
-    sex_option = st.selectbox("Select customer sex:", sex_list, key='sex_option')
-    age_option = st.slider('Select customer age:', min_value=0, max_value=100, value=25, step=1, key='age_option')
-    driving_license_option = st.selectbox("Select customer driving license status:", driving_license_list, key='driving_license_option')
-    region_code_option = st.selectbox("Select customer region code:", region_code_list, key='region_code_option')
-    previously_insured_option = st.selectbox("Select customer previously insured:", previously_insured_list, key='previously_insured_option')
-    vehicle_age_option = st.selectbox("Select customer vehicle age:", vehicle_age_list, key='vehicle_age_option')
-    vehicle_damage_option = st.selectbox("Select customer vehicle damage:", vehicle_damage_list, key='vehicle_damage_option')
-    annual_premium_option = st.number_input('Enter customer annual premium:', min_value=0, value=0)
-    policy_sales_channel_option = st.selectbox("Select customer policy sales channel:", policy_sales_channel_list, key='policy_sales_channel_option')
-    vintage_option = st.slider('Select customer vintage:', min_value=0, max_value=500, value=100, step=1, key='vintage_option')
+    sex_option = st.selectbox("Customer sex:", sex_list, key='sex_option')
+    age_option = st.slider('Customer age:', min_value=0, max_value=100, value=25, step=1, key='age_option')
+    driving_license_option = st.selectbox("Customer driving license status:", driving_license_list, key='driving_license_option')
+    region_code_option = st.selectbox("Customer region code:", region_code_list, key='region_code_option')
+    previously_insured_option = st.selectbox("Customer previously insured:", previously_insured_list, key='previously_insured_option')
+    vehicle_age_option = st.selectbox("Customer vehicle age:", vehicle_age_list, key='vehicle_age_option')
+    vehicle_damage_option = st.selectbox("Customer vehicle damage:", vehicle_damage_list, key='vehicle_damage_option')
+    annual_premium_option = st.number_input('Customer annual premium:', min_value=0, value=0)
+    policy_sales_channel_option = st.selectbox("Customer policy sales channel:", policy_sales_channel_list, key='policy_sales_channel_option')
+    vintage_option = st.slider('Customer vintage:', min_value=0, max_value=500, value=100, step=1, key='vintage_option')
     
     df_prediction = pd.DataFrame({
         'Gender': [sex_option],
