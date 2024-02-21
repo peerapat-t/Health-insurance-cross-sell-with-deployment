@@ -143,8 +143,8 @@ def main():
     # When the button is pressed
     if st.button('Predict'):
         prediction_result = prediction_model(df_prediction)
-        st.write('Dataframe for Prediction:', df_prediction)
-        st.success(f'Prediction Result: {prediction_result}')
+    st.write('Dataframe for Prediction:', df_prediction)
+    st.success(f'Prediction Result: {prediction_result}')
 
 # %%
 if __name__ == '__main__':
