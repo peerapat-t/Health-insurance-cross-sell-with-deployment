@@ -141,21 +141,26 @@ def main():
     policy_sales_channel_option = st.selectbox("Select customer policy sales channel:", vehicle_damage_list, key='policy_sales_channel_option')
     vintage_option = st.slider('Select customer vintage:', min_value=0, max_value=500, value=100, step=1, key='vintage_option')
     
-    df_prediction = pd.DataFrame()
+    df_prediction = pd.DataFrame({
+        'Gender': [sex_option],
+        'Age': [age_option],
+        'Driving_License': [driving_license_option],
+        'Region_Code': [region_code_option],
+        'Previously_Insured': [previously_insured_option],
+        'Vehicle_Age': [vehicle_age_option],
+        'Vehicle_Damage': [vehicle_damage_option],
+        'Annual_Premium': [annual_premium_option],
+        'Policy_Sales_Channel': [policy_sales_channel_option],
+        'Vintage': [vintage_option]
+        })
+    
     prediction_result = ''
 
+    # When the button is pressed
     if st.button('Predict'):
-        df_prediction = create_df(sex_option, age_option, driving_license_option, region_code_option,
-                                  previously_insured_option, vehicle_age_option, vehicle_damage_option,
-                                  annual_premium_option, policy_sales_channel_option, vintage_option)
         prediction_result = prediction_model(df_prediction)
-        
-        st.success('Dataframe for Prediction:')
-        st.write(df_prediction)
+        st.write('Dataframe for Prediction:', df_prediction)
         st.success(f'Prediction Result: {prediction_result}')
-        
-    st.success(df_prediction)
-    st.success(prediction_result)
 
 # %%
 if __name__ == '__main__':
