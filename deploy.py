@@ -140,7 +140,6 @@ def main():
     
     prediction_result = ''
 
-    # When the button is pressed
     if st.button('Predict'):
         prediction_result = prediction_model(df_prediction)
     st.write('Dataframe for Prediction:', df_prediction)
