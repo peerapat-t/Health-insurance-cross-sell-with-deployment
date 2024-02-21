@@ -122,7 +122,7 @@ def main():
     vehicle_age_option = st.selectbox("Select customer vehicle age:", vehicle_age_list, key='vehicle_age_option')
     vehicle_damage_option = st.selectbox("Select customer vehicle damage:", vehicle_damage_list, key='vehicle_damage_option')
     annual_premium_option = st.number_input('Enter customer annual premium:', min_value=0, value=0)
-    policy_sales_channel_option = st.selectbox("Select customer policy sales channel:", vehicle_damage_list, key='policy_sales_channel_option')
+    policy_sales_channel_option = st.selectbox("Select customer policy sales channel:", policy_sales_channel_list, key='policy_sales_channel_option')
     vintage_option = st.slider('Select customer vintage:', min_value=0, max_value=500, value=100, step=1, key='vintage_option')
     
     df_prediction = pd.DataFrame({
