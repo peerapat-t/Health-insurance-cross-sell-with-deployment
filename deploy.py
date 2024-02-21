@@ -26,22 +26,6 @@ logistic_rus = pickle.load(open('prediction model pickle/logistic_rus_prediction
 # # Create function
 
 # %%
-def create_df(gender, age, driving_license, region_code, previously_insured, vehicle_age, vehicle_damage, annual_premium, policy_sales_channel, vintage):
-    df = pd.DataFrame({
-        'Gender': [gender],
-        'Age': [age],
-        'Driving_License': [driving_license],
-        'Region_Code': [region_code],
-        'Previously_Insured': [previously_insured],
-        'Vehicle_Age': [vehicle_age],
-        'Vehicle_Damage': [vehicle_damage],
-        'Annual_Premium': [annual_premium],
-        'Policy_Sales_Channel': [policy_sales_channel],
-        'Vintage': [vintage]
-    })
-    return df
-
-# %%
 def convert_gender(df):
     df['Gender'] = df['Gender'].apply(lambda x: 1 if x == 'Male' else 0)
     return df
