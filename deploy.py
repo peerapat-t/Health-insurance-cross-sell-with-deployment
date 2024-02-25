@@ -1,4 +1,8 @@
 # %%
+import warnings
+warnings.simplefilter("ignore")
+
+# %%
 import streamlit as st
 
 # %%
